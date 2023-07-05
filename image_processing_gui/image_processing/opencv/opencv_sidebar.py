@@ -46,6 +46,8 @@ class OpenCVSidebar(SidebarTab):
 
         self.event_subscriber.subscribe(ImageProcessingEvent.UPDATE_PROCESS, self.on_update_process)
 
+        
+
 
 
 

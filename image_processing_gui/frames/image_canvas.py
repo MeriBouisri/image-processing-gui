@@ -57,6 +57,10 @@ class ImageCanvas(tk.Canvas):
         self.event_subscriber.subscribe(ImageProcessingEvent.APPLY_PROCESS, self.on_update_process)
         self.event_subscriber.subscribe(DisplayEvent.CLOSE, self.on_close)
         self.is_running = True
+
+        if isinstance(self.displayer.reader, DynamicImageReader):
+            self._loop_image = True
+
         self.on_update_process()
 
     # def on_eye_tracker_mode(self, event, processor: ImageProcessor):
